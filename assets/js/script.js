@@ -414,21 +414,7 @@
             $body.addClass('modal-open');
         }
     });
-    
-    // Dropdown
-    var $drop_toggle = $('.drop-toggle');	
-	if ($drop_toggle.length > 0 ) {
-		$drop_toggle.on("click",function(e){
-			if ($win.width() < 991) {
-				$(this).parent().children('.navbar-dropdown').slideToggle(400);
-				$(this).parent().siblings().children('.navbar-dropdown').slideUp(400);
-				$(this).parent().toggleClass('current');
-				$(this).parent().siblings().removeClass('current');
-				e.preventDefault();
-			}
-		});
-	}
-    
+ 
     // Form validation
 	var $form_validate = $('.form-validate');
 	if ($form_validate.length > 0) {
@@ -551,5 +537,20 @@
             }
 		});
 	}
+
+    /*** Add-ons scripts to the theme ***/
+
+    $('.navbar-menu li').click(function() {
+        $(this).toggleClass('clicked').find('.navbar-dropdown').toggleClass('navbar-dropdown-open');
+    });
+
+    $('.select2-selection').click(function() {
+        $('.select2-results__option:contains("Default Style")').attr('color', 'default');
+        $('.select2-results__option:contains("Charcoal Style")').attr('color', 'charcoal');
+        $('.select2-results__option:contains("Green Style")').attr('color', 'green');
+        $('.select2-results__option:contains("Pigeon Style")').attr('color', 'pigeon');
+        $('.select2-results__option:contains("Purple Style")').attr('color', 'purple');
+        $('.select2-results__option:contains("Violet Style")').attr('color', 'violet');
+    });
     
 })(jQuery);

@@ -8,7 +8,7 @@
 	<!-- Fav Icon  -->
 	<link rel="shortcut icon" href="images/favicon.png">
 	<!-- Site Title  -->
-	<title>TokenWiz - ICO User Dashboard Admin Template</title>
+	<title>Simplevisa - Site</title>
 	<!-- Vendor Bundle CSS -->
 	<link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=104">
 	<!-- Custom styles for this template -->
@@ -74,296 +74,198 @@
                         </li>                        
                     </ul>
                 </li>
-                <li><a href="index.html"><em class="ikon ikon-dashboard"></em> Overview</a></li>
+                <li><a href="#"><em class="ikon ikon-dashboard"></em> Overview</a></li>
                 <li class="has-dropdown page-links-all"><a class="drop-toggle" href="#"><em class="ikon ikon-coins"></em> Orders</a>
                     <ul class="navbar-dropdown">
-                        <li class=""><a class="drop-toggle" href="#">All Orders</a>
+                        <li class=""><a class="drop-toggle" href="orders.html">All Orders</a>
                         </li>
-                        <li class=""><a class="drop-toggle" href="#">New</a>
+                        <li class=""><a class="drop-toggle" href="new-order.html">New</a>
                         </li>                       
                     </ul>
                 </li>
-                <li><a href="#"><em class="far fa-file-alt navbar-fas"></em> Sites</a></li>
-                <li><a href="#"><em class="ikon ikon-distribution"></em> Customers</a></li>
+                <li><a href="index.html"><em class="far fa-file-alt navbar-fas"></em> Sites</a></li>
+                <li><a href="customers.html"><em class="ikon ikon-distribution"></em> Customers</a></li>
             </ul>
             <ul class="navbar-btns">
-                <li><a href="#"><em class="fas navbar-fas fa-question-circle"></em> Help</a></li>
-                <li><a href="#"><em class="ikon ikon-settings"></em> Settings</a></li>
+                <li><a href="help.html"><em class="fas navbar-fas fa-question-circle"></em> Help</a></li>
+                <li><a href="settings.html"><em class="ikon ikon-settings"></em> Settings</a></li>
                 <li class="yourplan text-light">Your plan: Free</li>
                 <li class="btn-update"><a href="#" class="btn btn-sm btn-primary"><em class="fas  fa-angle-double-up"></em><span>Update Plan</span></a></li>
                 <li></li>    
             </ul>
         </div><!-- .navbar-innr -->
 </div><!-- .navbar -->
+    <div class="main-side">
     <div class="page-content">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="token-statistics card card-token height-auto">
-                        <div class="card-innr">
-                            <div class="token-balance token-balance-with-icon">
-                                <div class="token-balance-icon">
-                                    <img src="images/logo-light-sm.png" alt="logo">
-                                </div>
-                                <div class="token-balance-text">
-                                    <h6 class="card-sub-title">Tokens Balance</h6>
-                                    <span class="lead">120,000,000 <span>TWZ</span></span>
-                                </div>
-                            </div>
-                            <div class="token-balance token-balance-s2">
-                                <h6 class="card-sub-title">Your Contribution</h6>
-                                <ul class="token-balance-list">
-                                    <li class="token-balance-sub">
-                                        <span class="lead">2.646</span>
-                                        <span class="sub">ETH</span>
-                                    </li>
-                                    <li class="token-balance-sub">
-                                        <span class="lead">1.265</span>
-                                        <span class="sub">BTC</span>
-                                    </li>
-                                    <li class="token-balance-sub">
-                                        <span class="lead">6.506</span>
-                                        <span class="sub">LTC</span>
-                                    </li>
-                                </ul>
+            <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer site-searchbar">
+                    <div class="row justify-content-between">
+                        <div class="col-9 col-sm-6 text-left">
+                            <div id="DataTables_Table_0_filter" class="dataTables_filter">
+                                <label>
+                                    <input type="search" class="form-control form-control-sm" placeholder="Type in to Search" aria-controls="DataTables_Table_0">
+                                </label>
                             </div>
                         </div>
-                    </div>
-                </div><!-- .col -->
-                <div class="col-lg-8">
-                    <div class="token-information card card-full-height">
-                        <div class="row no-gutters height-100">
-                            <div class="col-md-6 text-center">
-                                <div class="token-info">
-                                    <img class="token-info-icon" src="images/logo-sm.png" alt="logo-sm">
-                                    <div class="gaps-2x"></div>
-                                    <h1 class="token-info-head text-light">1 ETH = 1000 TWZ</h1>
-                                    <h5 class="token-info-sub">1 ETH = 254.05 USD</h5>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="token-info bdr-tl">
-                                    <div>
-                                        <ul class="token-info-list">
-                                            <li><span>Token Name:</span>TokenWiz</li>
-                                            <li><span>Ticket Symbol:</span>TWZ</li>
-                                        </ul>   
-                                        <a href="#" class="btn btn-primary"><em class="fas fa-download mr-3"></em>Download Whitepaper</a>
-                                    </div>
+                        <div class="col-3 text-right my-auto">
+                            <div class="data-table-filter relative d-inline-block">
+                                <a href="#" class="btn btn-light-alt btn-xs btn-icon toggle-tigger"> 
+                                    <em class="ti ti-settings"></em> 
+                                </a>
+                                <div class="toggle-class toggle-datatable-filter dropdown-content dropdown-content-top-left text-left">
+                                    <ul class="pdt-1x pdb-1x">
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="all" checked="" value=""> 
+                                            <label for="all">All</label>
+                                        </li>
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="approved" value="approved"> <
+                                            label for="approved">Approved</label>
+                                        </li>
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="pending" id="pending"> 
+                                            <label for="pending">Pending</label>
+                                        </li>
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="progress" id="progress"> 
+                                            <label for="progress">Progress</label>
+                                        </li>
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="cancled" id="cancled"> 
+                                            <label for="cancled">Cancled</label>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
-                    </div><!-- .card -->
-                </div><!-- .col -->
-                <div class="col-xl-8 col-lg-7">
-                    <div class="token-transaction card card-full-height">
-                        <div class="card-innr">
-                            <div class="card-head has-aside">
-                                <h4 class="card-title">Transaction</h4>
-                                <div class="card-opt">
-                                    <a href="transactions.html" class="link ucap">View ALL <em class="fas fa-angle-right ml-2"></em></a>
-                                </div>
-                            </div>
-                            <table class="table tnx-table">
-                                <thead>
-                                    <tr>
-                                        <th>TWZ Tokens</th>
-                                        <th>Amount</th>
-                                        <th class="d-none d-sm-table-cell tnx-date">Date</th>
-                                        <th class="tnx-type"><div class="tnx-type-text"></div></th>
-                                    </tr><!-- tr -->
-                                </thead><!-- thead -->
-                                <tbody>
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="data-state data-state-pending">
-                                                </div>
-                                                <span class="lead">18,750</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span>
-                                                <span class="lead">3.543</span>
-                                                <span class="sub">ETH <em class="fas fa-info-circle" data-toggle="tooltip" data-placement="bottom" data-original-title="1 ETH = 590.54 USD"></em></span>
-                                            </span>
-                                        </td>
-                                        <td class="d-none d-sm-table-cell tnx-date">
-                                            <span class="sub sub-s2">2018-08-24 10:20 PM</span>
-                                        </td>
-                                        <td class="tnx-type">
-                                            <span class="tnx-type-md badge badge-outline badge-success badge-md">Purchase</span>
-                                            <span class="tnx-type-sm badge badge-sq badge-outline badge-success badge-md">P</span>
-                                        </td>
-                                    </tr><!-- tr -->
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="data-state data-state-progress">
-                                                </div>
-                                                <span class="lead">8,052</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span>
-                                                <span class="lead">0.165</span>
-                                                <span class="sub">BTC <em class="fas fa-info-circle" data-toggle="tooltip" data-placement="bottom" data-original-title="1 BTC = 5450.54 USD"></em></span>
-                                            </span>
-                                        </td>
-                                        <td class="d-none d-sm-table-cell tnx-date">
-                                            <span class="sub sub-s2">2018-08-24 10:20 PM</span>
-                                        </td>
-                                        <td class="tnx-type">
-                                            <span class="tnx-type-md badge badge-outline badge-warning badge-md">Bonus</span>
-                                            <span class="tnx-type-sm badge badge-sq badge-outline badge-warning badge-md">B</span>
-                                        </td>
-                                    </tr><!-- tr -->
-                                    <tr>
-                                        <td>
-                                            <div class="d-flex align-items-center">
-                                                <div class="data-state data-state-approved">
-                                                </div>
-                                                <span class="lead">19,000</span>
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <span>
-                                                <span class="lead">3.141</span>
-                                                <span class="sub">LTC <em class="fas fa-info-circle" data-toggle="tooltip" data-placement="bottom" data-original-title="1 LTC = 180.54 USD"></em></span>
-                                            </span>
-                                        </td>
-                                        <td class="d-none d-sm-table-cell tnx-date">
-                                            <span class="sub sub-s2">2018-08-24 10:20 PM</span>
-                                        </td>
-                                        <td class="tnx-type">
-                                            <span class="tnx-type-md badge badge-outline badge-warning badge-md">Bonus</span>
-                                            <span class="tnx-type-sm badge badge-sq badge-outline badge-warning badge-md">B</span>
-                                        </td>
-                                    </tr><!-- tr -->
-                                </tbody><!-- tbody -->
-                            </table><!-- .table -->
-                        </div>
-                    </div>
                 </div>
-                <div class="col-xl-4 col-lg-5">
-                    <div class="token-calculator card card-full-height">
-                        <div class="card-innr">
-                            <div class="card-head">
-                                <h4 class="card-title">Token Calculation</h4>
-                                <p class="card-title-text">Enter amount to calculate token.</p>
-                            </div>
-                            <div class="token-calc">
-                                <div class="token-pay-amount">
-                                    <input id="token-base-amount" class="input-bordered input-with-hint" type="text" value="1">
-                                    <div class="token-pay-currency">
-                                        <a href="#" class="link ucap link-light toggle-tigger toggle-caret">ETH</a>
-                                        <div class="toggle-class dropdown-content">
-                                            <ul class="dropdown-list">
-                                                <li><a href="#">BTC</a></li>
-                                                <li><a href="#">LTC</a></li>
-                                                <li><a href="#">USD</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="token-received">
-                                    <div class="token-eq-sign">=</div>
-                                    <div class="token-received-amount">
-                                        <h5 class="token-amount">123,500.84</h5>
-                                        <div class="token-symbol">TWZ</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="token-calc-note note note-plane">
-                                <em class="fas fa-info-circle text-light"></em>
-                                <span class="note-text text-light">Amount calculated based current tokens price</span>
-                            </div>
-                            <div class="token-buy">
-                                <a href="#" class="btn btn-primary">Buy Tokens</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!-- .row -->
+            </div>
             <div class="row">
-                <div class="col-xl-8 col-lg-7">
-                    <div class="token-sale-graph card card-full-height">
-                        <div class="card-innr">
-                            <div class="card-head has-aside">
-                                <h4 class="card-title">Tokens Sale Graph</h4>
-                                <div class="card-opt">
-                                    <a href="#" class="link ucap link-light toggle-tigger toggle-caret">7 Days</a>
-                                    <div class="toggle-class dropdown-content">
-                                        <ul class="dropdown-list">
-                                            <li><a href="#">30 days</a></li>
-                                            <li><a href="#">1 years</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="chart-tokensale">
-                                <canvas id="tknSale"></canvas>
-                            </div>
-                        </div>
-                    </div><!-- .card -->
-                </div><!-- .col -->
-                <div class="col-xl-4 col-lg-5">
-                    <div class="token-sales card card-full-height">
-                        <div class="card-innr">
+                <div class="col-lg-6 col-xl-4">
+                    <div class="content-area card">
+                        <div class="card-innr site">                            
                             <div class="card-head">
-                                <h4 class="card-title">Token Sales Progress</h4>
+                                <img class="card-logo" src="images/sv-forms-logo-dark@2x.png"/>
+                                <span class="badge badge-outline badge-md badge-success">Active</span>
                             </div>
-                            <ul class="progress-info">
-                                <li><span>Raised</span> 2,758 TWZ</li>
-                                <li class="text-right"><span>TOTAL</span> 1,500,000 TWZ</li>
-                            </ul>
-                            <div class="progress-bar">
-                                <div class="progress-hcap" data-percent="83" style="width: 83%;">
-                                    <div>Hard cap <span>1,400,000</span></div>
-                                </div>
-                                <div class="progress-scap" data-percent="24" style="width: 24%;">
-                                    <div>Soft cap <span>40,000</span></div>
-                                </div>
-                                <div class="progress-percent" data-percent="28" style="width: 28%;"></div>
+                            <div class="card-body">                                    
+                                <h6 class="card-title">Website Name</h6>
+                                <a class="text-light" href="http://website.simplevisa.net">website.simplevisa.net</a>
                             </div>
-                            
-                            <span class="card-sub-title mgb-0-5x">Sales END IN</span>
-                            <div class="countdown-clock" data-date="2019/04/05"><div><span class="countdown-time countdown-time-first">78</span><span class="countdown-text">Day</span></div><div><span class="countdown-time">08</span><span class="countdown-text">Hour</span></div><div><span class="countdown-time">30</span><span class="countdown-text">Min</span></div><div><span class="countdown-time countdown-time-last">38</span><span class="countdown-text">Sec</span></div></div>
-                        </div>
-                    </div>
+                            <div class="card-buttons">
+                                <a href="edit.html" class="btn btn-sm btn-primary">Edit</a>
+                                <button class="btn btn-sm btn-danger ml-4">Delete</button>   
+                            </div>                                    
+                        </div><!-- .card-innr -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                    <div class="content-area card">
+                        <div class="card-innr site">                            
+                            <div class="card-head">
+                                <img class="card-logo" src="images/sv-forms-logo-dark@2x.png"/>
+                                <span class="badge badge-outline badge-md badge-warning">Draft</span>
+                            </div>
+                            <div class="card-body">                                    
+                                <h6 class="card-title">Website Name</h6>
+                                <a class="text-light" href="http://website.simplevisa.net">website.simplevisa.net</a>
+                            </div>
+                            <div class="card-buttons">
+                                <a href="edit.html" class="btn btn-sm btn-primary">Edit</a>
+                                <button class="btn btn-sm btn-danger ml-4">Delete</button>   
+                            </div>                                    
+                        </div><!-- .card-innr -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                    <div class="content-area card">
+                        <div class="card-innr site">                            
+                            <div class="card-head">
+                                <img class="card-logo" src="images/sv-forms-logo-dark@2x.png"/>
+                                <span class="badge badge-outline badge-md badge-danger">Deleted</span>
+                            </div>
+                            <div class="card-body">                                    
+                                <h6 class="card-title">Website Name</h6>
+                                <a class="text-light" href="http://website.simplevisa.net">website.simplevisa.net</a>
+                            </div>
+                            <div class="card-buttons">
+                                <a href="edit.html" class="btn btn-sm btn-primary">Edit</a>
+                                <button class="btn btn-sm btn-danger ml-4">Delete</button>   
+                            </div>                                    
+                        </div><!-- .card-innr -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                    <div class="content-area card">
+                        <div class="card-innr site">                            
+                            <div class="card-head">
+                                <img class="card-logo" src="images/sv-forms-logo-dark@2x.png"/>
+                                <span class="badge badge-outline badge-md badge-success">Active</span>
+                            </div>
+                            <div class="card-body">                                    
+                                <h6 class="card-title">Website Name</h6>
+                                <a class="text-light" href="http://website.simplevisa.net">website.simplevisa.net</a>
+                            </div>
+                            <div class="card-buttons">
+                                <a href="edit.html" class="btn btn-sm btn-primary">Edit</a>
+                                <button class="btn btn-sm btn-danger ml-4">Delete</button>   
+                            </div>                                    
+                        </div><!-- .card-innr -->
+                    </div><!-- .card -->
+                </div>
+                <div class="col-lg-6 col-xl-4">
+                    <div class="content-area card">
+                        <div class="card-innr site">                            
+                            <div class="card-head">
+                                <img class="card-logo" src="images/sv-forms-logo-dark@2x.png"/>
+                                <span class="badge badge-outline badge-md badge-success">Active</span>
+                            </div>
+                            <div class="card-body">                                    
+                                <h6 class="card-title">Veeeery looooong Website Name</h6>
+                                <a class="text-light" href="http://website.simplevisa.net">veeeeeerylooooooongwebsitename.simplevisa.net</a>
+                            </div>
+                            <div class="card-buttons">
+                                <a href="edit.html" class="btn btn-sm btn-primary">Edit</a>
+                                <button class="btn btn-sm btn-danger ml-4">Delete</button>   
+                            </div>                                    
+                        </div><!-- .card-innr -->
+                    </div><!-- .card -->
                 </div>
             </div><!-- .row -->
         </div><!-- .container -->
-        <div class="footer-bar">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-                <div class="col-md-8">
-                    <ul class="footer-links">
-                        <li><a href="#">Whitepaper</a></li>
-                        <li><a href="faq-page.html">FAQs</a></li>
-                        <li><a href="regular-page.html">Privacy Policy</a></li>
-                        <li><a href="regular-page.html">Terms of Condition</a></li>
-                    </ul>
-                </div><!-- .col -->
-                <div class="col-md-4 mt-2 mt-sm-0">
-                    <div class="d-flex justify-content-between justify-content-md-end align-items-center guttar-25px pdt-0-5x pdb-0-5x">
-                        <div class="copyright-text">&copy; 2018 TokenWiz.</div>
-                        <div class="lang-switch relative">
-                            <a href="#" class="lang-switch-btn toggle-tigger">En <em class="ti ti-angle-up"></em></a>
-                            <div class="toggle-class dropdown-content dropdown-content-up">
-                                <ul class="lang-list">
-                                    <li><a href="#">Fr</a></li>
-                                    <li><a href="#">Bn</a></li>
-                                    <li><a href="#">Lt</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div><!-- .col -->
-            </div><!-- .row -->
-        </div><!-- .container -->
-    </div><!-- .footer-bar -->
+        
     </div><!-- .page-content -->
+    <div class="footer-bar">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-md-6">
+                <ul class="footer-links">
+                    <li>
+                      <a href="https://simplevisa.com/terms">Use terms</a>
+                    </li>
+                    <li>
+                      <a href="https://simplevisa.com/privacy">Privacy Policy</a>
+                    </li>
+                </ul>
+            </div><!-- .col -->
+            <div class="col-md-6 mt-sm-0 pr-0 col-footer-second-row">
+                <div class="align-items-center footer-second-row">
+                    <div class="copyright-text">2019 SimpleVisa</div>
+                    <div class="lang-switch relative">
+                        <a href="#" class="lang-switch-btn toggle-tigger">en <em class="ti ti-angle-up"></em></a>
+                        <div class="toggle-class dropdown-content dropdown-content-up">
+                            <ul class="lang-list">
+                                  <li><a rel="nofollow" data-method="put" href="/locale?current_url=https%3A%2F%2Fsimplevisa.net%2Fuser%2Fteams%2F1879d8fa-76b6-4259-bff0-712faeee3299%2Fsites%2F7802afb7-01de-4cbb-9068-c9473f63bc33%2Fedit&amp;locale=en">en</a></li>
+                                  <li><a rel="nofollow" data-method="put" href="/locale?current_url=https%3A%2F%2Fsimplevisa.net%2Fuser%2Fteams%2F1879d8fa-76b6-4259-bff0-712faeee3299%2Fsites%2F7802afb7-01de-4cbb-9068-c9473f63bc33%2Fedit&amp;locale=fr">fr</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- .col -->
+        </div><!-- .row -->
+    </div><!-- .container -->
+</div>
+    </div>
     </div>
 
     
