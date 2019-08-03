@@ -1063,7 +1063,6 @@ select.select-sm { height: 37px; }
 .table td .sub { font-size: 12px; font-weight: 400; color: #758698; letter-spacing: 0.01em; line-height: 1; padding-top: 7px; }
 .table td .sub-s2 { font-size: 13px; color: #495463; padding-top: 0; }
 .table td .sub:first-child { padding-top: 0; }
-.table td > * { padding-right: 5px; }
 .table thead th { border: none; white-space: nowrap; font-size: 12px; font-weight: 700; }
 .table th { padding: 5px 0; }
 .table td { padding: 10px 0; }
@@ -3591,13 +3590,13 @@ p + .timeline-content-info { padding-top: 5px; }
 	font-size: 13px;
 }
 
-.site .card-head {
+.card-head {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
 
-.site .card-body > *, .data-col  {
+.site .card-body > *, .data-col, .customer-info li {
 	white-space: nowrap;
   	overflow: hidden;
   	text-overflow: ellipsis;
@@ -3623,12 +3622,32 @@ p + .timeline-content-info { padding-top: 5px; }
 	width: 85px;
 }
 
+.customer-info li {
+	background-color: #e6effb;
+	padding: 10px 20px;
+	margin-bottom: 15px;
+	width: 400px;
+	max-width: 100%;
+}
+
+.customer-info em {
+	font-size: 20px;
+	width: 25px;
+    text-align: center;
+	vertical-align: middle;
+	margin-right: 10px;
+}
+
 .data-col {
 	vertical-align: middle;
 }
 
 .data-col:last-child {
 	padding: 20px 0px;
+}
+
+.menu-button {
+	overflow: visible!important;
 }
 
 .select2-results__option::before {
@@ -3735,6 +3754,10 @@ p + .timeline-content-info { padding-top: 5px; }
 	.data-head .data-col {
 		font-size: 10px;
 		line-height: 1.5;
+	}
+
+	.visa-date, .visa-program, .visa-reference {
+		display: none;
 	}
 
 	.mobile-uuid {

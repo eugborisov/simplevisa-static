@@ -65,12 +65,33 @@
     <div class="container-divider">
     <div class="navbar">
         <div class="navbar-innr">
-            <ul class="navbar-menu">
-                <li class="has-dropdown page-links-all teamname"><a class="drop-toggle" href="#"><em class="ikon ikon-user"></em> Team name</a>
+            <ul class="navbar-menu">                
+                <li class="has-dropdown page-links-all teamname"><a class="drop-toggle" href="#"><em class="ikon ikon-user"></em> Organization</a>
                     <ul class="navbar-dropdown">
-                        <li class=""><a class="drop-toggle" href="#">Some text</a>
+                        <li class=""><a class="drop-toggle" href="#" data-toggle="modal" data-target="#organizations">Switch</a>
                         </li>
-                        <li class=""><a class="drop-toggle" href="#">Some text</a>
+                        <li class=""><a class="drop-toggle" href="#">Add</a>
+                        </li>                        
+                    </ul>
+                    <div class="modal fade" id="organizations" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-sm modal-dialog-centered">
+                            <div class="modal-content">
+                                <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><em class="ti ti-close"></em></a>
+                                <div class="popup-body">
+                                    <h3 class="popup-title">Choose an organization</h3>
+                                    
+                                    <p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible vermin. He lay on his armour-like back, and if he lifted his head a little he could see his brown belly, slightly domed and divided by arches into stiff sections. The bedding was hardly able to cover it and seemed ready to slide off any moment. His many legs, pitifully thin compared with the size of the rest of him, waved about helplessly as he looked.</p>
+                                
+                                </div>
+                            </div><!-- .modal-content -->
+                        </div><!-- .modal-dialog -->
+                    </div>
+                </li>
+                <li class="has-dropdown page-links-all"><a href="#"><em class="far fa-file-alt navbar-fas"></em> Sites</a>
+                    <ul class="navbar-dropdown">
+                        <li class=""><a class="drop-toggle" href="#">Switch</a>
+                        </li>
+                        <li class=""><a class="drop-toggle" href="#">Add</a>
                         </li>                        
                     </ul>
                 </li>
@@ -82,8 +103,7 @@
                         <li class=""><a class="drop-toggle" href="new-order.html">New</a>
                         </li>                       
                     </ul>
-                </li>
-                <li><a href="index.html"><em class="far fa-file-alt navbar-fas"></em> Sites</a></li>
+                </li>                
                 <li><a href="customers.html"><em class="ikon ikon-distribution"></em> Customers</a></li>
             </ul>
             <ul class="navbar-btns">
@@ -119,8 +139,7 @@
                                             <label for="all">All</label>
                                         </li>
                                         <li class="pd-1x pdl-2x pdr-2x"> 
-                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="approved" value="approved"> <
-                                            label for="approved">Approved</label>
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="approved" value="approved"> <label for="approved">Approved</label>
                                         </li>
                                         <li class="pd-1x pdl-2x pdr-2x"> 
                                             <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="pending" id="pending"> 
