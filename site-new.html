@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="zxx" class="js">
 <head>
-	<meta charset="utf-8">
-	<meta name="author" content="Softnio">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Fully featured and complete ICO Dashboard template for ICO backend management.">
-	<!-- Fav Icon  -->
-	<link rel="shortcut icon" href="images/favicon.png">
-	<!-- Site Title  -->
-	<title>Simplevisa - Add Customer</title>
-	<!-- Vendor Bundle CSS -->
-	<link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=104">
-	<!-- Custom styles for this template -->
-	<link rel="stylesheet" href="assets/css/style.css">
-	
+    <meta charset="utf-8">
+    <meta name="author" content="Softnio">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Fully featured and complete ICO Dashboard template for ICO backend management.">
+    <!-- Fav Icon  -->
+    <link rel="shortcut icon" href="images/favicon.png">
+    <!-- Site Title  -->
+    <title>Simplevisa - Add Site</title>
+    <!-- Vendor Bundle CSS -->
+    <link rel="stylesheet" href="assets/css/vendor.bundle.css?ver=104">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
 </head>
 
 <body class="page-user">
@@ -134,34 +134,56 @@
     <div class="page-content">
         <div class="container">
             <div class="content-area card">
-                <div class="card-innr card-innr-fix">
-                    <div class="card-head">
-                        <h6 class="card-title">New Customer</h6>
+                        <div class="card-innr card-innr-fix">
+                            <div class="card-head">
+                                <h6 class="card-title">Create Site</h6>
+                                <a href="index.html" class="btn btn-sm btn-auto btn-primary"><em class="fas fa-arrow-left mr-3"></em>Back</a>
+                            </div>
+                            <div class="gaps-1x"></div><!-- .gaps -->
+                            <form action="#" class="form-validate validate-modern">
+                                <div class="input-item input-with-label">
+                                    <label class="input-item-label text-exlight">Name</label>
+                                    <input class="input-bordered required" type="text" data-msg="Required" aria-required="true" id="input-site-name" name="input-site-name">
+                                </div>
+                                <div class="input-item input-with-label">
+                                    <label class="input-item-label text-exlight">Subdomain</label>
+                                    <input class="input-bordered required" type="text" data-msg="Required and unique" aria-required="true" id="input-site-subdomain" name="input-site-subdomain">
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-item input-with-label">
+                                            <label class="input-item-label text-exlight">File Upload</label>
+                                            <div class="relative" style="cursor:pointer">
+                                                <em class="input-file-icon fas fa-upload"></em>
+                                                <input type="file" class="input-file" id="file">
+                                                <label for="file">Logo</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-item input-with-label">
+                                            <label class="input-item-label text-exlight">Theme color</label>
+                                            <select class="select select-block select-bordered select2-hidden-accessible" tabindex="-1" aria-hidden="true">
+                                                <option value="option-one">Default Style</option>
+                                                <option value="option-two">Charcoal Style</option>
+                                                <option value="option-three">Green Style</option>
+                                                <option value="option-one">Pigeon Style</option>
+                                                <option value="option-two">Purple Style</option>
+                                                <option value="option-three">Violet Style</option>
+                                            </select>
+                                        </div>     
+                                    </div> 
+                                </div>
+                                <div class="input-item">
+                                    <input type="checkbox" class="input-switch" id="branding">
+                                    <label for="branding">Simplevisa Branding</label>
+                                </div>                                    
+                                <div class="gaps-1x"></div>
+                                <button class="btn btn-primary">Update</button>
+                                <button class="btn btn-danger ml-4">Delete</button>
+                            </form>
+                        </div><!-- .card-innr -->
                     </div>
-                    <div class="gaps-1x"></div>
-                    <form class="new_traveller form-validate validate-modern" id="new_traveller" action="" accept-charset="UTF-8" method="post">
-                        <input name="utf8" type="hidden" value="✓">
-                        <input type="hidden" name="authenticity_token" value="">
-                        <div class="input-item input-with-label">
-                          <label class="input-item-label text-exlight" for="traveller_first_name">First name</label>
-                          <input class="input-bordered required" placeholder="First Name" type="text" name="traveller[first_name]" id="traveller_first_name">
-                        </div>
-                        <div class="input-item input-with-label">
-                          <label class="input-item-label text-exlight" for="traveller_last_name">Last name</label>
-                          <input class="input-bordered required" placeholder="Last Name" type="text" name="traveller[last_name]" id="traveller_last_name">
-                        </div>
-
-                        <div class="input-item input-with-label">
-                          <label class="input-item-label text-exlight" for="traveller_email">Email</label>
-                          <input class="input-bordered required" placeholder="Email" type="email" value="" name="traveller[email]" id="traveller_email">
-                        </div>
-
-                        <div class="gaps-1x"></div>
-                        <input type="submit" name="commit" value="Save" class="btn btn-primary" data-disable-with="Save">
-                        <a class="btn btn-outline btn-lighter ml-4" href="customers.html">Cancel</a>
-                    </form>    
-                </div>
-            </div>
         </div><!-- .container -->        
     </div><!-- .page-content -->
     <div class="footer-bar">
@@ -199,8 +221,8 @@
 
     
 
-	<!-- JavaScript (include all script here) -->
-	<script src="assets/js/jquery.bundle.js?ver=104"></script>
-	<script src="assets/js/script.js?ver=104"></script>
+    <!-- JavaScript (include all script here) -->
+    <script src="assets/js/jquery.bundle.js?ver=104"></script>
+    <script src="assets/js/script.js?ver=104"></script>
 </body>
 </html>

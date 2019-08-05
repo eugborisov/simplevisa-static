@@ -65,12 +65,48 @@
     <div class="container-divider">
     <div class="navbar">
         <div class="navbar-innr">
-            <ul class="navbar-menu">
-                <li class="has-dropdown page-links-all teamname"><a class="drop-toggle" href="#"><em class="ikon ikon-user"></em> Team name</a>
+            <ul class="navbar-menu">                
+                <li class="has-dropdown page-links-all teamname"><a class="drop-toggle" href="#"><em class="ikon ikon-user"></em> Organization</a>
                     <ul class="navbar-dropdown">
-                        <li class=""><a class="drop-toggle" href="#">Some text</a>
+                        <li class=""><a class="drop-toggle" href="#" data-toggle="modal" data-target="#organizations">Switch</a>
                         </li>
-                        <li class=""><a class="drop-toggle" href="#">Some text</a>
+                        <li class=""><a class="drop-toggle" href="#">Add</a>
+                        </li>                        
+                    </ul>
+                    <div class="modal fade" id="organizations" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-sm modal-dialog-centered">
+                            <div class="modal-content">
+                                <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><em class="ti ti-close"></em></a>
+                                <div class="popup-body">
+                                    <h3 class="popup-title pb-4">Choose an organization</h3>
+                                    
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <span>VFS Global</span> 
+                                        <a href="#" class="link link-ucap ml-2">Switch</a>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <span>BLS International</span> 
+                                        <a href="#" class="link link-ucap ml-2">Switch</a>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <span>Visa Application Centre of the Republic of Latvia</span> 
+                                        <a href="#" class="link link-ucap ml-2">Switch</a>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <span>Interlink service</span> 
+                                        <a href="#" class="link link-ucap ml-2">Switch</a>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-primary">Add new</a>
+                                </div>
+                            </div><!-- .modal-content -->
+                        </div><!-- .modal-dialog -->
+                    </div>
+                </li>
+                <li class="has-dropdown page-links-all"><a href="#"><em class="far fa-file-alt navbar-fas"></em> Sites</a>
+                    <ul class="navbar-dropdown">
+                        <li class=""><a class="drop-toggle" href="index.html">Switch</a>
+                        </li>
+                        <li class=""><a class="drop-toggle" href="site-new.html">Add</a>
                         </li>                        
                     </ul>
                 </li>
@@ -82,8 +118,7 @@
                         <li class=""><a class="drop-toggle" href="new-order.html">New</a>
                         </li>                       
                     </ul>
-                </li>
-                <li><a href="index.html"><em class="far fa-file-alt navbar-fas"></em> Sites</a></li>
+                </li>                
                 <li><a href="customers.html"><em class="ikon ikon-distribution"></em> Customers</a></li>
             </ul>
             <ul class="navbar-btns">

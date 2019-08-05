@@ -65,12 +65,48 @@
     <div class="container-divider">
     <div class="navbar">
         <div class="navbar-innr">
-            <ul class="navbar-menu">
-                <li class="has-dropdown page-links-all teamname"><a class="drop-toggle" href="#"><em class="ikon ikon-user"></em> Team name</a>
+            <ul class="navbar-menu">                
+                <li class="has-dropdown page-links-all teamname"><a class="drop-toggle" href="#"><em class="ikon ikon-user"></em> Organization</a>
                     <ul class="navbar-dropdown">
-                        <li class=""><a class="drop-toggle" href="#">Some text</a>
+                        <li class=""><a class="drop-toggle" href="#" data-toggle="modal" data-target="#organizations">Switch</a>
                         </li>
-                        <li class=""><a class="drop-toggle" href="#">Some text</a>
+                        <li class=""><a class="drop-toggle" href="#">Add</a>
+                        </li>                        
+                    </ul>
+                    <div class="modal fade" id="organizations" tabindex="-1" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-sm modal-dialog-centered">
+                            <div class="modal-content">
+                                <a href="#" class="modal-close" data-dismiss="modal" aria-label="Close"><em class="ti ti-close"></em></a>
+                                <div class="popup-body">
+                                    <h3 class="popup-title pb-4">Choose an organization</h3>
+                                    
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <span>VFS Global</span> 
+                                        <a href="#" class="link link-ucap ml-2">Switch</a>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <span>BLS International</span> 
+                                        <a href="#" class="link link-ucap ml-2">Switch</a>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <span>Visa Application Centre of the Republic of Latvia</span> 
+                                        <a href="#" class="link link-ucap ml-2">Switch</a>
+                                    </div>
+                                    <div class="d-flex justify-content-between pb-2">
+                                        <span>Interlink service</span> 
+                                        <a href="#" class="link link-ucap ml-2">Switch</a>
+                                    </div>
+                                    <a href="#" class="btn btn-sm btn-primary">Add new</a>
+                                </div>
+                            </div><!-- .modal-content -->
+                        </div><!-- .modal-dialog -->
+                    </div>
+                </li>
+                <li class="has-dropdown page-links-all"><a href="#"><em class="far fa-file-alt navbar-fas"></em> Sites</a>
+                    <ul class="navbar-dropdown">
+                        <li class=""><a class="drop-toggle" href="index.html">Switch</a>
+                        </li>
+                        <li class=""><a class="drop-toggle" href="site-new.html">Add</a>
                         </li>                        
                     </ul>
                 </li>
@@ -82,8 +118,7 @@
                         <li class=""><a class="drop-toggle" href="new-order.html">New</a>
                         </li>                       
                     </ul>
-                </li>
-                <li><a href="index.html"><em class="far fa-file-alt navbar-fas"></em> Sites</a></li>
+                </li>                
                 <li><a href="customers.html"><em class="ikon ikon-distribution"></em> Customers</a></li>
             </ul>
             <ul class="navbar-btns">
@@ -107,108 +142,195 @@
                     <div class="d-flex align-items-center guttar-20px">
                         <div class="flex-col d-sm-block d-none">
                           <a class="btn btn-sm btn-outline btn-light" href="#" data-toggle="modal" data-target="#modal-import">Import</a>
-                          <a class="btn btn-sm btn-auto btn-primary ml-4" href="/user/teams/1879d8fa-76b6-4259-bff0-712faeee3299/sites/7802afb7-01de-4cbb-9068-c9473f63bc33/orders/new">New order</a>
+                          <a class="btn btn-sm btn-auto btn-primary ml-4" href="#">New order</a>
                         </div>
                     </div>
                 </div>                
                 <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
                     <div class="row justify-content-between pdb-1x">
-                    <div class="col-9 col-sm-6 text-left">
-                        <div id="DataTables_Table_0_filter" class="dataTables_filter">
-                            <label>
-                                <input type="search" class="form-control form-control-sm" placeholder="Type in to Search" aria-controls="DataTables_Table_0">
-                            </label>
+                        <div class="col-9 col-sm-6 text-left">
+                            <div id="DataTables_Table_0_filter" class="dataTables_filter">
+                                <label>
+                                    <input type="search" class="form-control form-control-sm" placeholder="Type in to Search" aria-controls="DataTables_Table_0">
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-3 text-right">
-                        <div class="data-table-filter relative d-inline-block">
-                            <a href="#" class="btn btn-light-alt btn-xs btn-icon toggle-tigger"> 
-                                <em class="ti ti-settings"></em> 
-                            </a>
-                            <div class="toggle-class toggle-datatable-filter dropdown-content dropdown-content-top-left text-left">
-                                <ul class="pdt-1x pdb-1x">
-                                    <li class="pd-1x pdl-2x pdr-2x"> 
-                                        <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="all" checked="" value=""> 
-                                        <label for="all">All</label>
-                                    </li>
-                                    <li class="pd-1x pdl-2x pdr-2x"> 
-                                        <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="approved" value="approved"> <
-                                        label for="approved">Approved</label>
-                                    </li>
-                                    <li class="pd-1x pdl-2x pdr-2x"> 
-                                        <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="pending" id="pending"> 
-                                        <label for="pending">Pending</label>
-                                    </li>
-                                    <li class="pd-1x pdl-2x pdr-2x"> 
-                                        <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="progress" id="progress"> 
-                                        <label for="progress">Progress</label>
-                                    </li>
-                                    <li class="pd-1x pdl-2x pdr-2x"> 
-                                        <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="cancled" id="cancled"> 
-                                        <label for="cancled">Cancled</label>
-                                    </li>
-                                </ul>
+                        <div class="col-3 text-right">
+                            <div class="data-table-filter relative d-inline-block">
+                                <a href="#" class="btn btn-light-alt btn-xs btn-icon toggle-tigger"> 
+                                    <em class="ti ti-settings"></em> 
+                                </a>
+                                <div class="toggle-class toggle-datatable-filter dropdown-content dropdown-content-top-left text-left">
+                                    <ul class="pdt-1x pdb-1x">
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="all" checked="" value=""> 
+                                            <label for="all">All</label>
+                                        </li>
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="approved" value="approved"> 
+                                            <label for="approved">Success</label>
+                                        </li>
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="pending" id="pending"> 
+                                            <label for="pending">Pending</label>
+                                        </li>
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="progress" id="progress"> 
+                                            <label for="progress">Processing</label>
+                                        </li>
+                                        <li class="pd-1x pdl-2x pdr-2x"> 
+                                            <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="cancled" id="cancled"> 
+                                            <label for="cancled">Declined</label>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                     <div>
                         <table class="data-table dt-init user-tnx dataTable no-footer" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
                             <thead>
                                 <tr class="data-item data-head" role="row">
-                                    <th class="data-col sorting_disabled" rowspan="1" colspan="1">UUID</th><th class="data-col sorting_disabled" rowspan="1" colspan="1">Traveller</th>
-                                    <th class="data-col sorting_disabled" rowspan="1" colspan="1">Site</th><th class="data-col sorting_disabled" rowspan="1" colspan="1">Total</th>
-                                    <th class="data-col sorting_disabled" rowspan="1" colspan="1">Payment Status</th>
+                                    <th class="data-col sorting_disabled w576-none" rowspan="1" colspan="1">UUID</th>
+                                    <th class="data-col sorting_disabled" rowspan="1" colspan="1">Traveller</th>
+                                    <th class="data-col sorting_disabled w576-none" rowspan="1" colspan="1">Site</th>
+                                    <th class="data-col sorting_disabled w576-none" rowspan="1" colspan="1">Total</th>
+                                    <th class="data-col sorting_disabled w991-none" rowspan="1" colspan="1">Payment Status</th>
                                     <th class="data-col sorting_disabled" rowspan="1" colspan="1">Status</th>
+                                    <th class="data-col sorting_disabled" rowspan="1" colspan="1"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr class="odd">
-                                    <td valign="top" colspan="1" class="data-col">58d14ef3-2e6e-4e28-8690-53f6b8e089b4</td>
+                                    <td valign="top" colspan="1" class="data-col w576-none">58d14ef3-2e6e-4e28-8690-53f6b8e089b4</td>
                                     <td valign="top" colspan="1" class="data-col">Leo Tolstoy</td>
-                                    <td valign="top" colspan="1" class="data-col">Goodtrip</td>
-                                    <td valign="top" colspan="1" class="data-col">$70</td>
-                                    <td valign="top" colspan="1" class="data-col">
+                                    <td valign="top" colspan="1" class="data-col w576-none">Goodtrip</td>
+                                    <td valign="top" colspan="1" class="data-col w576-none">$70</td>
+                                    <td valign="top" colspan="1" class="data-col w991-none">
                                         <span class="dt-type-md badge badge-outline badge-success badge-md">Success</span>
                                     </td>
                                     <td valign="top" colspan="1" class="data-col">
                                         <div class="data-state data-state-approved"></div>
                                     </td>
+                                    <td class="data-col text-right menu-button">
+                                        <div class="relative d-inline-block">
+                                            <a href="#" class="btn btn-light-alt btn-xs btn-icon toggle-tigger">
+                                                <em class="ti ti-more-alt"></em>
+                                            </a>
+                                            <div class="toggle-class dropdown-content dropdown-content-top-left">
+                                                <ul class="dropdown-list">
+                                                    <li>
+                                                        <a class="" href="order-view.html">
+                                                            <em class="ti ti-eye"></em> View Details
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" href="#">
+                                                            <em class="ti ti-na"></em> Cancel
+                                                        </a>
+                                                    </li>   
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="even">
-                                    <td valign="top" colspan="1" class="data-col"> c899107c-7383-4126-ac0b-cf3c84ea4ba9</td>
+                                    <td valign="top" colspan="1" class="data-col w576-none"> c899107c-7383-4126-ac0b-cf3c84ea4ba9</td>
                                     <td valign="top" colspan="1" class="data-col">Fyodor Dostoevsky</td>
-                                    <td valign="top" colspan="1" class="data-col">Goodtrip</td>
-                                    <td valign="top" colspan="1" class="data-col">$115</td>
-                                    <td valign="top" colspan="1" class="data-col">
+                                    <td valign="top" colspan="1" class="data-col w576-none">Goodtrip</td>
+                                    <td valign="top" colspan="1" class="data-col w576-none">$115</td>
+                                    <td valign="top" colspan="1" class="data-col w991-none">
                                         <span class="dt-type-md badge badge-outline badge-warning badge-md">Pending</span>
                                     </td>
                                     <td valign="top" colspan="1" class="data-col">
                                         <div class="data-state data-state-pending"></div>
                                     </td>
+                                    <td class="data-col text-right menu-button">
+                                        <div class="relative d-inline-block">
+                                            <a href="#" class="btn btn-light-alt btn-xs btn-icon toggle-tigger">
+                                                <em class="ti ti-more-alt"></em>
+                                            </a>
+                                            <div class="toggle-class dropdown-content dropdown-content-top-left">
+                                                <ul class="dropdown-list">
+                                                    <li>
+                                                        <a class="" href="order-view.html">
+                                                            <em class="ti ti-eye"></em> View Details
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" href="#">
+                                                            <em class="ti ti-na"></em> Cancel
+                                                        </a>
+                                                    </li>   
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="odd">
-                                    <td valign="top" colspan="1" class="data-col">a4654ef3-2e6e-4ed8-369f-53f6b8e089b9</td>
+                                    <td valign="top" colspan="1" class="data-col w576-none">a4654ef3-2e6e-4ed8-369f-53f6b8e089b9</td>
                                     <td valign="top" colspan="1" class="data-col">Anton Chekhov</td>
-                                    <td valign="top" colspan="1" class="data-col">Goodtrip</td>
-                                    <td valign="top" colspan="1" class="data-col">$94</td>
-                                    <td valign="top" colspan="1" class="data-col">
+                                    <td valign="top" colspan="1" class="data-col w576-none">Goodtrip</td>
+                                    <td valign="top" colspan="1" class="data-col w576-none">$94</td>
+                                    <td valign="top" colspan="1" class="data-col w991-none">
                                         <span class="dt-type-md badge badge-outline badge-info badge-md">Processing</span>
                                     </td>
                                     <td valign="top" colspan="1" class="data-col">
                                         <div class="data-state data-state-progress"></div>
                                     </td>
+                                    <td class="data-col text-right menu-button">
+                                        <div class="relative d-inline-block">
+                                            <a href="#" class="btn btn-light-alt btn-xs btn-icon toggle-tigger">
+                                                <em class="ti ti-more-alt"></em>
+                                            </a>
+                                            <div class="toggle-class dropdown-content dropdown-content-top-left">
+                                                <ul class="dropdown-list">
+                                                    <li>
+                                                        <a class="" href="order-view.html">
+                                                            <em class="ti ti-eye"></em> View Details
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" href="#">
+                                                            <em class="ti ti-na"></em> Cancel
+                                                        </a>
+                                                    </li>   
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="even">
-                                    <td valign="top" colspan="1" class="data-col">21d1a5b3-2eb7-1234-86bc-78b6b840c9b1</td>
+                                    <td valign="top" colspan="1" class="data-col w576-none">21d1a5b3-2eb7-1234-86bc-78b6b840c9b1</td>
                                     <td valign="top" colspan="1" class="data-col">Mikhail Bulgakov</td>
-                                    <td valign="top" colspan="1" class="data-col">Goodtrip</td>
-                                    <td valign="top" colspan="1" class="data-col">$231</td>
-                                    <td valign="top" colspan="1" class="data-col">
+                                    <td valign="top" colspan="1" class="data-col w576-none">Goodtrip</td>
+                                    <td valign="top" colspan="1" class="data-col w576-none">$231</td>
+                                    <td valign="top" colspan="1" class="data-col w991-none">
                                         <span class="dt-type-md badge badge-outline badge-danger badge-md">Declined</span>
                                     </td>
                                     <td valign="top" colspan="1" class="data-col">
                                         <div class="data-state data-state-canceled"></div>
+                                    </td>
+                                    <td class="data-col text-right menu-button">
+                                        <div class="relative d-inline-block">
+                                            <a href="#" class="btn btn-light-alt btn-xs btn-icon toggle-tigger">
+                                                <em class="ti ti-more-alt"></em>
+                                            </a>
+                                            <div class="toggle-class dropdown-content dropdown-content-top-left">
+                                                <ul class="dropdown-list">
+                                                    <li>
+                                                        <a class="" href="order-view.html">
+                                                            <em class="ti ti-eye"></em> View Details
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a class="" href="#">
+                                                            <em class="ti ti-na"></em> Cancel
+                                                        </a>
+                                                    </li>   
+                                                </ul>
+                                            </div>
+                                        </div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -235,10 +357,11 @@
                             <div class="dz-message" data-dz-message="">
                                 <span class="dz-message-text">Drag and drop file</span>
                                 <span class="dz-message-or">or</span>
-                                <button class="btn btn-sm btn-primary">Choose a File</button>
+                                <button class="btn btn-sm btn-dark">Choose a File</button>
                             </div>
                         </div>
-                    </div>                
+                    </div>
+                    <button class="btn btn-primary">Import</button>               
                 </div>
             </div><!-- .modal-content -->
         </div><!-- .modal-dialog -->
