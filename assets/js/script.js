@@ -2,7 +2,7 @@
 (function($){
 	'use strict';
 	var $win = $(window), $body = $('body'), $doc = $(document);
-	
+
 	// Touch Class
 	if (!("ontouchstart" in document.documentElement)) {
 		$body.addClass("no-touch");
@@ -12,10 +12,10 @@
 		return $win.width();
 	}
 	var wwCurrent = winwidth();
-	$win.on('resize', function () { 
-		wwCurrent = winwidth(); 
+	$win.on('resize', function () {
+		wwCurrent = winwidth();
 	});
-    
+
     //Sticky Nav
 	var $is_sticky = $('.is-sticky'), $topbar = $('.topbar'), $topbar_wrap = $('.topbar-wrap');
 	if ($is_sticky.length > 0 ) {
@@ -30,7 +30,7 @@
             }
 		});
 	}
-    
+
     //Data Percent
     var $data_percent = $('[data-percent]');
     if($data_percent.length > 0){
@@ -39,7 +39,7 @@
             $this.css('width', $this_percent + '%');
         });
     }
-    
+
 	// Active page menu when click
 	var CurURL = window.location.href, urlSplit = CurURL.split("#");
 	var $nav_link = $("a");
@@ -50,7 +50,7 @@
 			}
 		});
 	}
-    
+
     // Countdown Clock
     var $count_token_clock = $('.countdown-clock');
 	if ($count_token_clock.length > 0 ) {
@@ -61,7 +61,7 @@
 			});
 		});
 	}
-    
+
 	// Select
 	var $select = $('.select');
 	if ($select.length > 0) {
@@ -84,7 +84,7 @@
 
     // Toggle section On click
     var _trigger = '.toggle-tigger', _toggle = '.toggle-class';
-    
+
     if ($(_trigger).length > 0 ) {
 		$doc.on('click', _trigger, function(e){
             var $self = $(this);
@@ -94,16 +94,16 @@
             e.preventDefault();
         });
 	}
-    
+
     $doc.on('click', 'body', function(e){
         var $elm_tig = $(_trigger), $elm_tog = $(_toggle);
-		if (!$elm_tog.is(e.target) && $elm_tog.has(e.target).length===0 && 
+		if (!$elm_tog.is(e.target) && $elm_tog.has(e.target).length===0 &&
             !$elm_tig.is(e.target) && $elm_tig.has(e.target).length===0) {
                 $elm_tog.removeClass('active');
                 $elm_tig.removeClass('active');
 		}
 	});
-    
+
     // Mobile Nav
     var $toggle_nav = $('.toggle-nav'),  $navbar = $('.navbar');
     if($toggle_nav.length > 0){
@@ -114,13 +114,13 @@
         });
     }
     $doc.on('click', 'body', function(e){
-		if (!$toggle_nav.is(e.target) && $toggle_nav.has(e.target).length===0 && 
+		if (!$toggle_nav.is(e.target) && $toggle_nav.has(e.target).length===0 &&
             !$navbar.is(e.target) && $navbar.has(e.target).length===0) {
             $toggle_nav.removeClass('active');
             $navbar.removeClass('active');
 		}
 	});
-    
+
     function activeNav(navbar){
         if(wwCurrent < 991){
             navbar.delay(500).addClass('navbar-mobile');
@@ -129,17 +129,17 @@
         }
     }
     activeNav($navbar);
-    $win.on('resize', function () { 
+    $win.on('resize', function () {
         activeNav($navbar);
 	});
-    
-    
+
+
     // Tooltip
     var $tooltip = $('[data-toggle="tooltip"]');
     if($tooltip.length > 0){
         $tooltip.tooltip();
     }
-    
+
     // Date Picker
     var $date_picker = $('.date-picker'), $date_picker_dob = $('.date-picker-dob'), $time_picker = $('.time-picker');
     if($date_picker.length > 0){
@@ -174,15 +174,15 @@
             });
         });
     }
-    
-    
+
+
     //Copy Text to Clipboard
     function copytoclipboard(triger,action,feedback){
         var supportCopy = document.queryCommandSupported('copy'), $triger = triger, $action = action, $feedback = feedback;
-        
+
         $triger.parent().find($action).removeAttr('disabled').select();
         if (supportCopy===true) {
-            
+
             document.execCommand("copy");
             $feedback.text('Copied to Clipboard').fadeIn().delay(1000).fadeOut();
             $triger.parent().find($action).attr('disabled', 'disabled');
@@ -191,7 +191,7 @@
         }
 
     }
-    
+
     // Copyto clipboard Feedback Function
     function feedback (el, state) {
         if (state==='success'){
@@ -200,14 +200,14 @@
             $(el).parent().find('.copy-feedback').text('Faild to Copy').fadeIn().delay(1000).fadeOut();
         }
     }
-    // Copyto clipboard 
+    // Copyto clipboard
     var clipboard = new ClipboardJS('.copy-clipboard');
     clipboard.on('success', function(e) {
         feedback(e.trigger, 'success'); e.clearSelection();
     }).on('error', function(e) {
         feedback(e.trigger, 'fail');
     });
-    
+
     // Copyto clipboard In Modal
     var clipboardModal = new ClipboardJS('.copy-clipboard-modal', {
         container: document.querySelector('.modal')
@@ -217,8 +217,8 @@
     }).on('error', function(e) {
         feedback(e.trigger, 'fail');
     });
-    
-    
+
+
     //File Input
     var $input_file = $('.input-file');
     if($input_file.length > 0){
@@ -233,7 +233,7 @@
             });
         });
     }
-    
+
     // Dropzone
 	var $upload_zone = $('.upload-zone');
 	if ($upload_zone.length > 0 ) {
@@ -254,7 +254,7 @@
 			mainClass: 'mfp-fade'
 		});
 	}
-    
+
     // Data Tables @v101
     var $data_table = $('.dt-init');
     if($data_table.length > 0){
@@ -264,7 +264,7 @@
                "ordering": false,
                "autoWidth": false,
                "dom":'<t><"row align-items-center"<"col-sm-6 text-left"p><"col-sm-6 text-sm-right"i>>',
-               "pageLength": _items, 
+               "pageLength": _items,
                "bPaginate" : $('.data-table tbody tr').length>_items,
                "iDisplayLength": _items,
                "language": {
@@ -280,18 +280,18 @@
                         "previous":   "Prev"
                     },
                 },
-            }); 
+            });
         });
     }
-    
-    
+
+
     var $data_table_filter = $('.dt-filter-init');
     if($data_table_filter.length > 0){
        var $data_table_fltr = $data_table_filter.DataTable({
            "ordering": false,
            autoWidth: false,
            "dom":'<"row justify-content-between pdb-1x"<"col-9 col-sm-6 text-left"f><"col-3 text-right"<"data-table-filter relative d-inline-block">>><t><"row align-items-center"<"col-sm-6 text-left"p><"col-sm-6 text-sm-right"i>>',
-           "pageLength": 6, 
+           "pageLength": 6,
            "bPaginate" : $('.data-table tbody tr').length>6,
            "iDisplayLength": 6,
            "language": {
@@ -308,21 +308,21 @@
                 },
             },
         });
-        
+
         $(".data-table-filter").append('<a href="#" class="btn btn-light-alt btn-xs btn-icon toggle-tigger"> <em class="ti ti-settings"></em> </a><div class="toggle-class toggle-datatable-filter dropdown-content dropdown-content-top-left text-left"><ul class="pdt-1x pdb-1x"><li class="pd-1x pdl-2x pdr-2x"> <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="all" checked value=""> <label for="all">All</label></li><li class="pd-1x pdl-2x pdr-2x"> <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" id="approved" value="approved"> <label for="approved">Approved</label></li><li class="pd-1x pdl-2x pdr-2x"> <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="pending" id="pending"> <label for="pending">Pending</label></li><li class="pd-1x pdl-2x pdr-2x"> <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="progress" id="progress"> <label for="progress">Progress</label></li><li class="pd-1x pdl-2x pdr-2x"> <input class="data-filter input-checkbox input-checkbox-sm" type="radio" name="filter" value="cancled" id="cancled"> <label for="cancled">Cancled</label></li></ul></div>');
-        
+
         var $data_filter = $('.data-filter');
         $data_filter.on('change', function(){
             var _thisval = $(this).val();
             $data_table_fltr.columns('.dt-tnxno').search( _thisval ? _thisval : '', true, false ).draw();
         });
     }
-    
+
     // Line Chart
     var lineChart = 'tknSale';
     if ($('#'+lineChart).length > 0) {
         var lineCh = document.getElementById(lineChart).getContext("2d");
-        
+
         var chart = new Chart(lineCh, {
             // The type of chart we want to create
             type: 'line',
@@ -381,14 +381,14 @@
                             beginAtZero:true,
                             fontSize:12,
                             fontColor:'#9eaecf',
-                            
+
                         },
-                        gridLines: { 
+                        gridLines: {
                             color: "#e5ecf8",
                             tickMarkLength:0,
                             zeroLineColor: '#e5ecf8'
                         },
-                        
+
                     }],
                     xAxes: [{
                         ticks: {
@@ -406,7 +406,7 @@
             }
         });
     }
-    
+
     // Bootstrap Modal Fix
     var $modal = $('.modal');
     $modal.on('shown.bs.modal', function () {
@@ -414,7 +414,7 @@
             $body.addClass('modal-open');
         }
     });
- 
+
     // Form validation
 	var $form_validate = $('.form-validate');
 	if ($form_validate.length > 0) {
@@ -423,7 +423,7 @@
             $self.validate();
         });
 	}
-    
+
     // Form Wizard @v103
     var $wizard = $(".wizard-wrap").show();
     $wizard.steps({
@@ -458,15 +458,15 @@
             return $wizard.valid();
         },
         onFinished: function (event, currentIndex){window.location.href = "thank-you.html";}
-        
+
     }).validate({
         errorPlacement: function errorPlacement(error, element) { element.after(error); }
     });
-    
+
     //Chat @v104
-    var $chat_wrap = $('.chat-wrap'), 
-        $chat_info = $('.chat-information-wrap'), 
-        $chat_contacts = $('.chat-contacts'), 
+    var $chat_wrap = $('.chat-wrap'),
+        $chat_info = $('.chat-information-wrap'),
+        $chat_contacts = $('.chat-contacts'),
         $show_info = $('.show-information'),
         $chat_trigger = $('.chat-contact-trigger');
     if ($show_info.length > 0 ) {
@@ -485,7 +485,7 @@
 			e.preventDefault();
 		});
 	}
-    
+
     var $chat_search = $('.chat-messages-search'), $show_search = $('.show-search');
     if ($show_search.length > 0 ) {
 		$show_search.on("click",function(e) {
@@ -495,36 +495,36 @@
 			e.preventDefault();
 		});
 	}
-    
+
     $doc.on('click', 'body', function(e){
-		if (!$chat_trigger.is(e.target) && $chat_trigger.has(e.target).length===0 && 
+		if (!$chat_trigger.is(e.target) && $chat_trigger.has(e.target).length===0 &&
             !$chat_contacts.is(e.target) && $chat_contacts.has(e.target).length===0) {
                 $chat_contacts.removeClass('active');
                 $chat_wrap.removeClass('contact-active');
 		}
-		if (!$show_info.is(e.target) && $show_info.has(e.target).length===0 && 
+		if (!$show_info.is(e.target) && $show_info.has(e.target).length===0 &&
             !$chat_info.is(e.target) && $chat_info.has(e.target).length===0 && $win.width() < 992) {
                 $show_info.removeClass('active');
                 $chat_info.removeClass('active');
                 $chat_contacts.removeClass('short');
                 $chat_wrap.removeClass('information-active');
 		}
-        if (!$show_search.is(e.target) && $show_search.has(e.target).length===0 && 
+        if (!$show_search.is(e.target) && $show_search.has(e.target).length===0 &&
             !$chat_search.is(e.target) && $chat_search.has(e.target).length===0) {
                 $show_search.removeClass('active');
                 $chat_search.removeClass('active');
 		}
 	});
-    
+
     // TimeLine @v104
     var $load_timeline = $('.load-timeline');
     if ($load_timeline.length > 0 ) {
 		$load_timeline.on("click",function(e) {
 			e.preventDefault();
-            var $self = $(this), 
+            var $self = $(this),
                 _target = $self.data('target'),
                 _show = ($self.data('show')) ? $self.data('show') : 5;
-            
+
             if(_target) {
                 var $items = $('#'+_target).find('.hidden');
                 if($items.length > 0) {
@@ -532,7 +532,7 @@
                     if($items.length <= _show) {
                         $self.parent().fadeOut('slow');
                         $('#'+_target).addClass('loaded');
-                    }   
+                    }
                 }
             }
 		});
@@ -552,5 +552,5 @@
         $('.select2-results__option:contains("Purple Style")').attr('color', 'purple');
         $('.select2-results__option:contains("Violet Style")').attr('color', 'violet');
     });
-    
+
 })(jQuery);

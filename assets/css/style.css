@@ -3363,7 +3363,7 @@ p + .timeline-content-info { padding-top: 5px; }
   .navbar-menu { display: flex; margin: 0 -15px; padding-top: 0; }
   .navbar-menu li { position: relative; }
   .navbar-btns { display: flex; margin: 0 -10px; }
-  
+
   .navbar-dropdown li a { padding: 6px 40px;}
   .navbar-dropdown li a:before { display: none; }
   .navbar-dropdown .navbar-dropdown { left: 100%; top: -10px; padding: 10px 0; }
@@ -3471,7 +3471,7 @@ p + .timeline-content-info { padding-top: 5px; }
 
 .navbar-innr {
 	width: 100%;
-	height: 100%;	
+	height: 100%;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
@@ -3482,7 +3482,7 @@ p + .timeline-content-info { padding-top: 5px; }
 	justify-content: flex-start;
 }
 
- .navbar-menu > li { 
+ .navbar-menu > li {
  	padding: 0 15px;
 }
 
@@ -3500,7 +3500,7 @@ p + .timeline-content-info { padding-top: 5px; }
 	padding: 6px 0;
 }
 
-.navbar-btns > li {	
+.navbar-btns > li {
 	padding: 3px 10px;
 }
 
@@ -3522,7 +3522,7 @@ p + .timeline-content-info { padding-top: 5px; }
     transition: max-height 1s ease-in-out;
 }
 
-.navbar-dropdown li a { 
+.navbar-dropdown li a {
 	font-size: 13px;
 	padding: 6px 40px;
 	color: #2c80ff;
@@ -3605,7 +3605,7 @@ p + .timeline-content-info { padding-top: 5px; }
 }
 
 .site-searchbar {
-	background-color: #fff;	
+	background-color: #fff;
 	margin-bottom: 40px;
 	padding: 10px;
 }
@@ -3691,6 +3691,10 @@ p + .timeline-content-info { padding-top: 5px; }
 	background-color: #5539ce;
 }
 
+.input-group-text {
+  font-size: 14px;
+}
+
 .footer-bar {
 	padding: 10px 50px;
 }
@@ -3739,7 +3743,7 @@ p + .timeline-content-info { padding-top: 5px; }
 
 	.site .card-title {
 		font-size: 1.2em;
-	} 
+	}
 
 	.site .badge-md {
 		padding: 3px 6px;
